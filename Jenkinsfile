@@ -20,7 +20,7 @@ pipeline {
                 echo 'Running application container...'
                 sh 'docker stop my-app-container || true'
                 sh 'docker rm my-app-container || true'
-                sh 'docker run -d --name my-app-container -p 80:80 my-app:${BUILD_NUMBER}'
+                sh 'docker run -d --name my-app-container -p 80:3000 my-app:${BUILD_NUMBER}'
             }
         }
     }
