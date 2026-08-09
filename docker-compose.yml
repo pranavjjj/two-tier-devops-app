@@ -4,7 +4,7 @@ services:
   web:
     build: .
     ports:
-      - "3000:3000"
+      - "80:3000"
     environment:
       - PORT=3000
       - DB_HOST=db

@@ -8,19 +8,11 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Deploy Application Stack') {
             steps {
-                echo 'Building Docker image...'
-                sh 'docker build -t my-app:${BUILD_NUMBER} .'
-            }
-        }
-
-        stage('Deploy Container') {
-            steps {
-                echo 'Running application container...'
-                sh 'docker stop my-app-container || true'
-                sh 'docker rm my-app-container || true'
-                sh 'docker run -d --name my-app-container -p 80:3000 my-app:${BUILD_NUMBER}'
+                echo 'Deploying Node.js and PostgreSQL via Docker Compose...'
+                sh 'docker compose down || true'
+                sh 'docker compose up -d --build'
             }
         }
     }
