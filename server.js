@@ -62,7 +62,7 @@ app.get('/', async (req, res) => {
       </head>
       <body>
         <div class="container">
-          <h1>Two-Tier App: Node.js + PostgreSQL</h1>
+          <h1>Two-Tier Appp: Node.js + PostgreSQL</h1>
           <form action="/add" method="POST">
             <input type="text" name="message" placeholder="Enter a message..." required />
             <button type="submit">Submit to DB</button>
