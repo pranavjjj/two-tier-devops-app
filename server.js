@@ -49,7 +49,7 @@ app.get('/', async (req, res) => {
       <!DOCTYPE html>
       <html>
       <head>
-        <title>Two-Tier DevOps App</title>
+        <title>Two-Tier git-devops appp</title>
         <style>
           body { font-family: Arial, sans-serif; margin: 40px; background: #f4f4f9; }
           .container { max-width: 600px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
