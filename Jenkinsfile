@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // REPLACE WITH YOUR ACTUAL DOCKER HUB USERNAME
+        
         DOCKER_USER     = 'pranavjjjjj'
         IMAGE_NAME      = 'two-tier-app'
         IMAGE_TAG       = "${env.BUILD_NUMBER}"
@@ -50,7 +50,7 @@ pipeline {
 
     post {
         always {
-            // Clean up old dangling images to preserve server disk space
+            
             sh 'docker image prune -f || true'
             cleanWs()
         }
